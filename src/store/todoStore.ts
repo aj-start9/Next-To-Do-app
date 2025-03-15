@@ -23,6 +23,7 @@ export const useTodoStore = create<TodoState>((set) => ({
 
   addTodo: async (title: string) => {
     const res = await fetch("/api/todos", {
+      
       method: "POST",
       body: JSON.stringify({ title }),
       headers: { "Content-Type": "application/json" },
